@@ -1,0 +1,589 @@
+@import url('https://fonts.googleapis.com/css?family=Mukta:200,300,400,500,600,700,800&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Mukta', sans-serif;
+}
+
+a{
+  text-decoration: none;
+}
+
+
+.foreground{
+  background-color: rgba(37,36,35,0.9);
+  backdrop-filter: blur(64px);
+}
+
+.main-body{
+  padding: 0 100px 0 100px;
+}
+
+.extra-light{
+  font-weight: 200;
+}
+
+.light{
+  font-weight: 300;
+}
+
+.regular{
+  font-weight: 400;
+}
+
+.medium{
+  font-weight: 500;
+}
+
+.semi-bold{
+  font-weight: 600;
+}
+
+.bold{
+  font-weight: 700;
+}
+
+.label{
+  font-size: 24px;
+  color: #FFC730;
+}
+
+.nav{
+  display: flex;
+  justify-content: space-between;
+  height:80px;
+  border-bottom: 1px solid white;
+  margin-bottom: 40px;
+  align-items: center;
+  width: 100%;
+}
+
+.nav span{
+  font-size: 24px;
+  color: #FFFFFF;
+}
+
+.search-container{
+  width: 30%;
+}
+
+/* .Zimmer{
+  height: 100vh;
+  overflow-y: scroll;
+} */
+
+.search{
+  outline: none;
+  width: 100%;
+  border: 1px solid #FFC730;
+  height: 48px;
+  border-radius:4px;
+  background-color: #343433;
+  padding-left: 24px;
+  color: white;
+  font-size: 14px;
+}
+
+.overviewposter{
+  width: 40% !important;
+  flex: 0 0 30% !important;
+  margin-right: 40px !important;
+  height: 500px !important;
+}
+
+.movie-title-label{
+  font-size: 36px;
+  color: #FFC730;
+  margin-bottom: 8px;
+}
+
+.big-label{
+  font-size: 18px;
+  color: #FFC730;
+  margin-bottom: 8px;
+}
+
+.reviews-mother{
+  width: 30%;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow-y: scroll;
+  height: 510px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.reviews{
+  overflow: scroll;
+}
+
+.comment-container{
+  margin-bottom: 24px;
+}
+
+.comment-author, .comment-body{
+  color: #FFFFFF;
+}
+
+.write-comment{
+  display: flex;
+  flex-direction: column;
+}
+
+.info-comment{
+  color: #FFFFFF;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.author-input{
+  height:32px
+}
+
+.author-input, .comment-input{
+  border:none;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 2px;
+  resize: none;
+  padding: 10px;
+  color: white;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+.submit-comment{
+  height: 32px;
+  background-color: #FFC730;
+  border: none;
+  outline: none;
+  border-radius: 2px;
+}
+
+.actor-image-container{
+  width: 180px;
+  height: 240px;
+  border-radius: 10px;
+  overflow: hidden;
+  object-fit: contain;
+  background-color: #FFC730;
+  margin-bottom: 8px;
+
+}
+
+.actor-image{
+  width: 100%;
+}
+
+.cast-mother{
+  overflow-x: scroll;
+  width: 100%;
+  margin-bottom: 24px;
+  display: flex;
+}
+
+.cast-mother::-webkit-scrollbar {
+  display: none;
+}
+
+.cast-mother {
+  -ms-overflow-style: none;
+}
+
+.cast-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 16px;
+  width: auto;
+}
+
+.actor-name-container{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.actor-name{
+  color: #FFFFFF;
+  font-size: 18px;
+  line-height: 100%;
+}
+
+.character-name{
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 12px;
+}
+
+.movie-title{
+  font-size: 56px;
+  color: #FFFFFF;
+  line-height: 100%;
+  margin-bottom: 16px;
+}
+
+.small-label{
+  font-size: 18px;
+  color: #FFC730;
+}
+
+.fav-trailer{
+  display: flex;
+}
+
+.add-to-favourites-btn, .watch-trailer, .added-to-favourites{
+  padding: 20px 16px 20px 16px ;
+  border-radius: 10px;
+  background-color: rgba(37,36,35,0.9);
+  width: auto;
+  border: none;
+  height: 64px;
+  color: #FFFFFF;
+  outline: none;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+}
+
+.watch-trailer{
+  background-color: rgb(255,199,48);
+  color: #343433;
+}
+
+.added-to-favourites{
+  background-color: rgb(255,199,48);
+  color: #000000;
+}
+
+.add-to-favourites-icon{
+  margin-right: 16px;
+}
+
+.relatedMovies-container{
+  display: flex;
+  overflow-x: scroll;
+}
+
+.relatedMovies-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE and Edge */
+.relatedMovies-container {
+  -ms-overflow-style: none;
+}
+
+.fav-logout-container{
+  display: flex;
+  align-items: center;
+}
+
+.fav-container{
+  display: flex;
+  margin-right: 24px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 160px;
+  padding: 16px;
+  align-items: center;
+}
+
+.fav-count-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #FFC730;
+}
+
+.logout-text{
+  text-decoration: none;
+  color: #FFC730;
+  font-size: 18px;
+}
+
+.my-fav{
+  margin-right: 8px;
+  font-size: 18px;
+  color: #FFFFFF;
+}
+
+.fav-icon{
+  margin-right: 8px;
+}
+
+.production-company{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 48px;
+  margin: 16px;
+
+}
+
+.production-company-image{
+  width: auto;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 16px;
+}
+
+.productioncompanies-mother{
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: row;
+  height: auto;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.production-company-logo{
+  height: 100%;
+}
+
+.genre-container{
+  display: flex;
+  align-items: center;
+}
+
+.genre-mother-container{
+  width: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.genre-pointer{
+  border-radius: 50%;
+  background-color:  #FFC730;;
+  height: 8px;
+  width: 8px;
+  margin-right: 5px;
+}
+
+.genre{
+  font-size: 18px;
+  color: #FFFFFF;
+  margin-right: 24px;
+}
+
+.tagline{
+  font-size: 24px;
+  color: #FFFFFF;
+  margin-bottom: 16px;
+}
+
+.moviedetails{
+  width: 40%;
+}
+
+.movie-details-container{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+
+.poster{
+  background:#FFFFFF;
+  width: 15.7%;
+  height: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  padding: 4px 2px;
+  margin: 5px;
+  flex: 0 0 15.7%;
+}
+
+.poster-container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+  border-radius: 8px;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.poster-image{
+  width: 100% ;
+  display: flex;
+}
+
+.mother-poster{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px;
+}
+
+.overview-link{
+  width: 100%;
+}
+
+.synopsis-background{
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  background-color: #000000;
+  height:100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+.synopsis-background:hover{
+  opacity: 1;
+  backdrop-filter: blur(8px);
+}
+
+.synopsis{
+  font-size: 14px;
+  color: white;
+  line-height: 140%;
+  height: 140px;
+}
+
+/**MODAL STYLING**/
+
+.Overlay{
+  position: fixed;
+  top:0;
+  bottom:0;
+  right: 0;
+  left: 0;
+  background-color:rgba(0, 0, 0, 0.5);
+}
+
+.Modal{
+  position: absolute;
+  top:0;
+  bottom:0;
+  right: 0;
+  left: 0;
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.close-modal{
+  width: 80%;
+  display: flex;
+  justify-content: flex-end;
+
+}
+
+.video-modal{
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.close-modal-btn{
+  height: 32px;
+  width: 32px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  outline: none;
+
+}
+
+/**MODAL STYLING**/
+
+@media (max-width: 375px){
+
+  .main-body{
+    padding: 0 10px 0 10px;
+  }
+
+  .nav span {
+    font-size: 14px;
+  }
+
+  .fav-logout-container{
+    display: none;
+  }
+
+  .log-out{
+    display: none;
+  }
+
+  .label{
+    font-size: 14px;
+  }
+
+  .search-container{
+    width: 65%;
+  }
+
+  .search{
+    height: 32px;
+    margin-right: 0;
+  }
+
+  .poster{
+    width: 45%;
+    flex: 0 0 45%;
+    height: 260px;
+  }
+
+  .movie-details-container{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .overviewposter{
+    width: 100% !important;
+    flex: 0 0 30% !important;
+    margin-right: 0 !important;
+    height: 500px !important;
+    margin-bottom: 24px;
+  }
+
+  .moviedetails{
+    width: 100%
+  }
+
+  .movie-title-label{
+    font-size: 18px;
+  }
+
+  .movie-title{
+    font-size: 24px;
+  }
+
+  .tagline{
+    font-size: 16px;;
+  }
+}
