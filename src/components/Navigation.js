@@ -12,9 +12,6 @@ const Navigation = () => {
       <Search />
       <div className="fav-logout-container">
       <MyFavourites />
-      <Link className="log-out"  to='/logout'>
-        <p className='logout-text regular'>Log out</p>
-      </Link>
       </div>
     </div>
   )
