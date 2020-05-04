@@ -20,6 +20,7 @@
     "redux": "^4.0.5"
   },
   "scripts": {
+    "prestart": "npm run json-server",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
