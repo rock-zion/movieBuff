@@ -106,15 +106,14 @@ a{
 }
 
 .reviews-mother{
-  width: 30%;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
+  width: 60%;
   overflow-y: scroll;
-  height: 510px;
-  padding: 16px;
+  min-height: auto;
+  max-height: 500px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin-bottom: 24px;
 }
 
 .reviews{
@@ -122,11 +121,23 @@ a{
 }
 
 .comment-container{
-  margin-bottom: 24px;
+  margin-bottom: 8px;
+  background-color: #343433;
+  padding: 20px;
+  border-radius: 4px;
 }
 
-.comment-author, .comment-body{
+.comment-container span{
   color: #FFFFFF;
+}
+
+.comment-author{
+  color: #FFC730;
+}
+
+.comment-body{
+  color: #FFC730;
+  text-decoration: underline;
 }
 
 .write-comment{
@@ -198,7 +209,7 @@ a{
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin: 16px;
+  margin-right: 16px;
   width: auto;
 }
 
@@ -268,8 +279,13 @@ a{
 }
 
 .relatedMovies-container{
-  display: flex;
-  overflow-x: scroll;
+  display: grid;
+    overflow-x: auto;
+    width: 100%;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fill,minmax(160px,1fr));
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(160px,1fr);
 }
 
 .relatedMovies-container::-webkit-scrollbar {
@@ -390,7 +406,7 @@ a{
 }
 
 .moviedetails{
-  width: 40%;
+  width: 100%;
 }
 
 .movie-details-container{
@@ -403,15 +419,13 @@ a{
 
 .poster{
   background:#FFFFFF;
-  width: 15.7%;
+  width: 100%;
   height: 280px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 8px;
   padding: 4px 2px;
-  margin: 5px;
-  flex: 0 0 15.7%;
 }
 
 .poster-container{
@@ -432,9 +446,9 @@ a{
 }
 
 .mother-poster{
-  display: flex;
-  flex-wrap: wrap;
-  padding: 5px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 10px;
 }
 
 .overview-link{
@@ -507,6 +521,8 @@ a{
   align-items: center;
 }
 
+
+
 .close-modal-btn{
   height: 32px;
   width: 32px;
@@ -516,12 +532,12 @@ a{
   align-items: center;
   border-radius: 50%;
   outline: none;
-
+  background-color: #FFFFFF;
 }
 
 /**MODAL STYLING**/
 
-@media (max-width: 375px){
+@media (max-width: 700px){
 
   .main-body{
     padding: 0 10px 0 10px;
@@ -552,12 +568,6 @@ a{
     margin-right: 0;
   }
 
-  .poster{
-    width: 45%;
-    flex: 0 0 45%;
-    height: 260px;
-  }
-
   .movie-details-container{
     flex-direction: column;
     align-items: flex-start;
@@ -585,5 +595,18 @@ a{
 
   .tagline{
     font-size: 16px;;
+  }
+
+  .mother-poster{
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .reviews-mother{
+    width: 100%;
+  }
+
+  .fav-trailer{
+    justify-content: space-between;
+    margin-bottom: 24px;
   }
 }

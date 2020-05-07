@@ -30,10 +30,8 @@ const MovieOverview = (props) => {
         movieid={movieid}
       />
       </div>
-      
-      <Comments movieid={movieid}/>
     </div>
-    
+    <Comments movieid={movieid}/>
     <div className='display-cast-mother'>
       <DisplayCast movieid={movieid} />
     </div>

@@ -117,12 +117,12 @@ export const displayMovieOverview = (payload) => {
 
  export const getComments = (payload) => {
   return dispatch => {
-    return axios.get(`http://localhost:5000/Comments/${payload}`)
+    return axios.get(`https://api.themoviedb.org/3/movie/${payload}/reviews?api_key=${API_KEY}&language=en-US&page=1`)
     .then(response => {
-      console.log(response.status)
+      console.log(response.data.results)
       dispatch({
         type: GET_COMMENTS,
-        payload: response.data.movie_comments
+        payload: response.data.results
       })
     }).catch((error) => {
         dispatch({
@@ -134,6 +134,7 @@ export const displayMovieOverview = (payload) => {
  }
 
  export const addComment = (payload) => {
+   console.log(payload)
   return dispatch => {
     return axios.post(``)
   }

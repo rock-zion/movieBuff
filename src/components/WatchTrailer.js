@@ -21,7 +21,6 @@ const Watch = (props) => {
   return (
     
     <div>
-      {/* <a rel="noopener noreferrer" href={`https://www.youtube.com/watch?v=${movieTrailer}`} target='_blank'> */}
       <button onClick={() => setModalOpen(!modalOpen)} className="watch-trailer">
         Watch Trailer
       </button>

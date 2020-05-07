@@ -16,11 +16,11 @@
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.1",
     "react-scroll": "^1.7.16",
+    "react-show-more": "^2.0.0",
     "react-youtube": "^7.11.2",
     "redux": "^4.0.5"
   },
   "scripts": {
-    "prestart": "npm run json-server",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
