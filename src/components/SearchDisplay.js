@@ -13,7 +13,7 @@ const SearchDisplay = (props) => {
   useEffect(() => {
     props.searchMovies(searchQuery)
     // eslint-disable-next-line
-  },[])
+  },[movie])
 
   useEffect(() => {
     return function cleanup() {

@@ -1,13 +1,16 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import '../App.css'
 import {connect} from 'react-redux'
 import {searchMovies} from '../action/index'
 import {withRouter} from 'react-router-dom'
 
+
 const FindMovies = (props) => {
 
   const [searchQuery,setSearchQuery] = useState("")
+  useEffect(() => {
 
+  },[searchQuery])
   const processSearchQuery = (event) => {
     event.preventDefault()
     props.history.push(`/search/${searchQuery}`)
